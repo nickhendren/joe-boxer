@@ -1,0 +1,43 @@
+.pc-two {
+  color: #FFFFFF;
+  font-family: avenir next condensed;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  h2 {
+    font-size: 62px;
+    margin: 175px 0 0 9%;
+    position: absolute;
+    text-shadow: 0px 25px 250px rgba(0, 0, 0, 0.3);
+    z-index: $z-index;
+  }
+
+  button {
+    background-color: #000000;
+    border: 0;
+    color: #FFFFFF;
+    font-family: avenir next condensed;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: 8px 20px;
+    position: absolute;
+    text-transform: uppercase;
+    z-index: 1;
+  }
+
+  .patterns-mens {
+    margin-left: 9%;
+    margin-top: 380px;
+  }
+
+  .patterns-womens {
+    margin-left: 22%;
+    margin-top: 380px;
+  }
+
+  img {
+    margin-top: -5px;
+    position: relative;
+  }
+}

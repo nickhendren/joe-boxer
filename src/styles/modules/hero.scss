@@ -1,0 +1,46 @@
+/*================ Hero Section ================*/
+.hero-section {
+  color: white;
+  margin-bottom: -4px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+
+  img {
+    min-width: 100%;
+  }
+
+  h2 {
+    font-family: avenir next condensed;
+    font-size: 70px;
+    left: 50%;
+    position: absolute;
+    text-shadow: 0px 0px 150px rgba(0, 0, 0, 1);
+    top: 40%;
+    transform: translate(-50%, -50%);
+  }
+
+  button {
+    background-color: #000000;
+    border: 0;
+    color: #FFFFFF;
+    font-family: avenir next condensed;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    padding: 15px 25px 15px 30px;
+    position: absolute;
+  }
+}
+
+.hero-section__men {
+    left: 40%;
+    top: 60%;
+  }
+
+.hero-section__women {
+    left: 51%;
+    top: 60%;
+  }

@@ -1,0 +1,32 @@
+<div class="pc-one">
+  <span class="text-shadow">{{ section.settings.pc-one-sale }}</span>
+  <h2 class="text-shadow">{{ section.settings.pc-one-text }}</h2>
+  <button type="button" name="Shop Styles">{{ section.settings.pc-one-btn-text}}</button>
+  <img src='{{ '../assets/shop-styles.jpg' | asset_url }}>' />
+</div>
+
+{% schema %}
+  {
+    "name": "Styles",
+    "settings": [
+      {
+        "type": "text",
+        "id": "pc-one-sale",
+        "label": "Sale",
+        "default": "Sale"
+      },
+      {
+        "type": "text",
+        "id": "pc-one-btn-text",
+        "label": "Shop Styles",
+        "default": "Shop Styles"
+      },
+      {
+        "type": "text",
+        "id": "pc-one-text",
+        "label": "Heading",
+        "default": "Styles For<br>Everyone"
+      }
+    ]
+  }
+{% endschema %}

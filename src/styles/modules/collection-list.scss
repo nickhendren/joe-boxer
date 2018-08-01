@@ -1,0 +1,40 @@
+.styles-we-love {
+  font-family: avenir next condensed;
+  text-align: center;
+  text-transform: uppercase;
+
+  h2 {
+    font-weight: bold;
+    font-size: 23px;
+    letter-spacing: 1px;
+    margin: 30px 0;
+  }
+
+  .featured-styles {
+    padding: 0 50px;
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      height: 500px;
+      transition: transform 0.3s;
+      width: 100%;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+
+    p {
+      color: #000000;
+      font-size: 14px;
+      margin-bottom: 35px;
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}

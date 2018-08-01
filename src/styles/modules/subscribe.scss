@@ -1,0 +1,50 @@
+.subscribe {
+  font-family: avenir next condensed;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: -5px 4px 24px rgba(0, 0, 0, 0.15);
+
+  span {
+    margin-left: 9%;
+    margin-top: 4%;
+    position: absolute;
+    z-index: $z-index;
+  }
+
+  .subscribe-header {
+    font-size: 62px;
+    line-height: 62px;
+    margin-left: 9%;
+    margin-top: 7%;
+    position: absolute;
+    z-index: $z-index;
+  }
+
+  .subscribe-subheader {
+    font-size: 62px;
+    margin-left: 9%;
+    margin-top: 17%;
+    position: absolute;
+    z-index: $z-index;
+  }
+
+  button {
+    background-color: #000000;
+    border: 0;
+    color: #FFFFFF;
+    font-family: avenir next condensed;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-left: 9%;
+    margin-top: 24%;
+    padding: 8px 20px;
+    position: absolute;
+    text-transform: uppercase;
+    z-index: 1;
+  }
+
+  img {
+    position: relative;
+  }
+}

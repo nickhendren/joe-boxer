@@ -1,0 +1,32 @@
+<div class="pc-two">
+  <h2>{{ section.settings.pc-two-text }}</h2>
+  <button class="patterns-mens" type="button" name="Shop Styles">{{ section.settings.pc-two-btn-text-mens}}</button>
+  <button class="patterns-womens" type="button" name="Shop Styles">{{ section.settings.pc-two-btn-text-womens}}</button>
+  <img src='{{ '../assets/patterns.jpg' | asset_url }}>' />
+</div>
+
+{% schema %}
+  {
+    "name": "Patterns",
+    "settings": [
+      {
+        "type": "text",
+        "id": "pc-two-text",
+        "label": "Header",
+        "default": "Express Your<br>Wild Side"
+      },
+      {
+        "type": "text",
+        "id": "pc-two-btn-text-mens",
+        "label": "Shop Men's Patterns",
+        "default": "Shop Men's Patterns"
+      },
+      {
+        "type": "text",
+        "id": "pc-two-btn-text-womens",
+        "label": "Shop Women's Patterns",
+        "default": "Shop Women's Patterns"
+      }
+    ]
+  }
+{% endschema %}
