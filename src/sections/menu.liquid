@@ -1,0 +1,86 @@
+<div class="grid menu">
+  <div class="grid__item medium-up--one-eighth">
+    <h3 class="uppercase">{{ section.settings.menu-men }}</h3>
+    <p class="uppercase">Underwear</p>
+    <ul>
+      <li>Briefs</li>
+      <li>Trunks</li>
+      <li>Boxers</li>
+      <li>Boxer Briefs</li>
+      <li>Undershirts</li>
+    </ul>
+  </div>
+  <div class="grid__item medium-up--one-eighth loungewear">
+    <p class="uppercase">Lougewear</p>
+    <ul>
+      <li>Tops</li>
+      <li>Bottoms</li>
+    </ul>
+  </div>
+  <div class="grid__item medium-up--one-eighth">
+    <h3 class="uppercase">{{ section.settings.menu-women }}</h3>
+    <p class="uppercase">Underwear</p>
+    <ul>
+      <li>Briefs</li>
+      <li>Trunks</li>
+      <li>Boxers</li>
+      <li>Boxer Briefs</li>
+      <li>Undershirts</li>
+    </ul>
+  </div>
+  <div class="grid__item medium-up--one-eighth loungewear">
+    <p class="uppercase">Lougewear</p>
+    <ul>
+      <li>Tops</li>
+      <li>Bottoms</li>
+    </ul>
+  </div>
+  <div class="grid__item medium-up--one-eighth specialty">
+    <h3 class="uppercase">{{ section.settings.menu-specialty }}</h3>
+    <ul class="uppercase">
+      <li>NHL</li>
+      <li>Holiday</li>
+      <li class="sale">Sale</li>
+    </ul>
+  </div>
+  <div class="grid__item medium-up--one-eighth">
+    <img src='{{ '../assets/menu-img1.jpg' | asset_url }}>' />
+  </div>
+  <div class="grid__item medium-up--one-eighth">
+    <img src='{{ '../assets/menu-img2.jpg' | asset_url }}>' />
+  </div>
+  <div class="grid__item medium-up--one-eighth account uppercase" style="text-align: right;">
+    <h3>Welcome, Jacob</h3>
+    <ul style="padding-left: 0; margin-top: 0;">
+      <li>Account</li>
+      <li>Order History</li>
+      <li>Sign Out</li>
+    </ul>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Menu",
+    "settings": [
+      {
+        "type": "text",
+        "id": "menu-men",
+        "label": "Men",
+        "default": "Men"
+      },
+      {
+        "type": "text",
+        "id": "menu-women",
+        "label": "Women",
+        "default": "Women"
+      },
+      {
+        "type": "text",
+        "id": "menu-specialty",
+        "label": "Specialty",
+        "default": "Specialty"
+      }
+    ]
+  }
+{% endschema %}
