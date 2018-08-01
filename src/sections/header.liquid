@@ -5,14 +5,18 @@
     }
   {% endif %}
 </style>
-<div data-section-id="{{ section.id }}" data-section-type="header-section">
+<div data-section-id="{{ section.id }}" data-section-type="header-section" class="header">
   <header role="banner">
+
+    <img src='{{ '../assets/hamburger.png' | asset_url }}>' style="position: absolute; margin-top: 40px; margin-left: 25px;" />
+    <span style="color: #FFFFFF; letter-spacing: 3px; font-size: 12px; text-transform: uppercase; position: absolute; margin-top: 41px; margin-left: 60px; font-weight: bold; font-family: avenir next condensed;">Menu</span>
+
     {% if template.name == 'index' %}
       <h1 itemscope itemtype="http://schema.org/Organization">
     {% else %}
       <div class="h1" itemscope itemtype="http://schema.org/Organization">
     {% endif %}
-        <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
+        <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}" style="font-family: 'Roboto Slab', serif;">
           {% if section.settings.logo != blank %}
             {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
             <img src="{{ section.settings.logo | img_url: image_size }}"
@@ -20,7 +24,7 @@
                  alt="{{ section.settings.logo.alt | default: shop.name }}"
                  itemprop="logo">
           {% else %}
-            {{ shop.name }}
+            Joe Boxer<span style="font-size: 10px; vertical-align: top; margin-top: 17px; margin-left: -5px; position: absolute; font-weight: 100;">&reg;</span>
           {% endif %}
         </a>
     {% if template.name == 'index' %}
@@ -29,90 +33,14 @@
       </div>
     {% endif %}
 
-    <a href="/cart">
-      {% include 'icon-cart' %}
-      {{ 'layout.cart.title' | t }}
-      ({{ cart.item_count }} {{ 'layout.cart.items_count' | t: count: cart.item_count }})
-    </a>
+    <img src='{{ '../assets/magnifying-glass.png' | asset_url }}>' style="position: absolute; right: 4%; margin-top: -45px;" />
 
-    {% if shop.customer_accounts_enabled %}
-      <ul>
-        {% if customer %}
-          <li>
-            {% if customer.first_name != blank %}
-              {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %}
-              {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }}
-            {% else %}
-              <a href="/account">{{ 'layout.customer.account' | t }}</a>
-            {% endif %}
-          </li>
-          <li>
-            {{ 'layout.customer.log_out' | t | customer_logout_link }}
-          </li>
-        {% else %}
-          <li>
-            {{ 'layout.customer.log_in' | t | customer_login_link }}
-          </li>
-          <li>
-            {{ 'layout.customer.create_account' | t | customer_register_link }}
-          </li>
-        {% endif %}
-      </ul>
-    {% endif %}
-
-    <form action="/search" method="get" role="search">
-      <label for="Search" class="label-hidden">
-        {{ 'general.search.placeholder' | t }}
-      </label>
-      <input type="search"
-             name="q"
-             id="Search"
-             value="{{ search.terms | escape }}"
-             placeholder="{{ 'general.search.placeholder' | t }}">
-      <button type="submit" class="btn">
-        {% include 'icon-search' %}
-        <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
-      </button>
-    </form>
+    <img src='{{ '../assets/shopping-bag.png' | asset_url }}>' style="position: absolute; right: 2%; margin-top: -50px;" />
 
   </header>
 
-  <nav role="navigation">
-    <ul>
-      {% for link in linklists[section.settings.main_linklist].links %}
-        {% if link.links != blank %}
-          <li>
-            <a href="{{ link.url }}">{{ link.title | escape }}</a>
-            <ul>
-              {% for childlink in link.links %}
-                {% if childlink.links != blank %}
-                  <li>
-                    <a href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
-                    <ul>
-                      {% for grandchildlink in childlink.links %}
-                        <li>
-                          <a href="{{ grandchildlink.url }}">{{ grandchildlink.title | escape }}</a>
-                        </li>
-                      {% endfor %}
-                    </ul>
-                  </li>
-                {% else %}
-                  <li>
-                    <a href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
-                  </li>
-                {% endif %}
-              {% endfor %}
-            </ul>
-          </li>
-        {% else %}
-          <li>
-            <a href="{{ link.url }}">{{ link.title | escape }}</a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </nav>
 </div>
+
 
 {% schema %}
   {

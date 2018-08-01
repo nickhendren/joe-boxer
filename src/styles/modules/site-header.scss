@@ -1,9 +1,20 @@
 /*================ Site Header ================*/
-.site-logo {
-  display: block;
+.header {
+  background-color: #101010;
 
-  img {
+  .site-logo {
     display: block;
-    width: 100%;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: -30px;
+    margin-bottom: -25px;
+    font-size: 75px;
+
+    img {
+      display: block;
+      width: 100%;
+    }
   }
 }
