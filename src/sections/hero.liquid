@@ -1,0 +1,32 @@
+<div class="hero-section">
+  <img src='{{ '../assets/hero.png' | asset_url }}>' />
+  <h2>{{ section.settings.hero-text }}</h2>
+  <button class="hero-section__men" type="button" name="Shop Men">{{ section.settings.hero-men }}</button>
+  <button class="hero-section__women" type="button" name="Shop Women">{{ section.settings.hero-women }}</button>
+</div>
+
+{% schema %}
+  {
+    "name": "Hero",
+    "settings": [
+      {
+        "type": "text",
+        "id": "hero-text",
+        "label": "Heading",
+        "default": "Get Caught With Your<br>Pants Down"
+      },
+      {
+        "type": "text",
+        "id": "hero-men",
+        "label": "Shop Men",
+        "default": "Shop Men"
+      },
+      {
+        "type": "text",
+        "id": "hero-women",
+        "label": "Shop Women",
+        "default": "Shop Women"
+      }
+    ]
+  }
+{% endschema %}
