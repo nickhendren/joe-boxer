@@ -47,9 +47,25 @@
     </ul>
   {% endif %}
 
-  <div>
-    <small>{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}. {{ powered_by_link }}</small>
+<div class="grid footer-content">
+  <div class="grid__item medium-up--one-third copyright">
+    <p>&copy; 2017 Joe Boxer Canada</p>
   </div>
+  <div class="grid__item medium-up--one-third footer-links">
+    <ul>
+      <a href="/"><li>About</li></a>
+      <a href="/"><li>Shipping</li></a>
+      <a href="/"><li>Returns</li></a>
+      <a href="/"><li>Privacy</li></a>
+      <a href="/"><li>Terms</li></a>
+    </ul>
+  </div>
+  <div class="grid__item medium-up--one-third social-links">
+    <a href="https://www.instagram.com/joeboxercanada/"><i class="fab fa-instagram"></i></a>
+    <a href="https://twitter.com/joeboxer?lang=en"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.facebook.com/JoeBoxerCanada/"><i class="fab fa-facebook"></i></a>
+  </div>
+</div>
 </footer>
 
 {% schema %}
