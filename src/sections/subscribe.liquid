@@ -1,0 +1,39 @@
+<div class="subscribe">
+  <span>{{ section.settings.subscription }}</span>
+  <h2 class="subscribe-header">{{ section.settings.subscribe-header }}</h2>
+  <h2 class="subscribe-subheader">{{ section.settings.subscribe-subheader }}</h2>
+  <button class="patterns-mens" type="button" name="Shop Styles">{{ section.settings.subscribe-btn-text}}</button>
+  <img src='{{ '../assets/subscribe.jpg' | asset_url }}>' />
+</div>
+
+{% schema %}
+  {
+    "name": "Patterns",
+    "settings": [
+      {
+        "type": "text",
+        "id": "subscription",
+        "label": "Subscription",
+        "default": "Subscription"
+      },
+      {
+        "type": "text",
+        "id": "subscribe-header",
+        "label": "Header",
+        "default": "That New<br>Underwear Feel."
+      },
+      {
+        "type": "text",
+        "id": "subscribe-subheader",
+        "label": "Subheader",
+        "default": "In The Mail."
+      },
+      {
+        "type": "text",
+        "id": "subscribe-btn-text",
+        "label": "Learn More",
+        "default": "Learn More"
+      }
+    ]
+  }
+{% endschema %}
