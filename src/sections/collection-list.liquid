@@ -1,35 +1,41 @@
-{% if section.settings.title != blank %}
-  <h2>{{ section.settings.title | escape }}</h2>
-{% endif %}
+<div class="styles-we-love">
+  {% if section.settings.title != blank %}
+    <h2>{{ section.settings.title | escape }}</h2>
+  {% endif %}
 
-{% for block in section.blocks limit: section.blocks.size %}
-  <div {{ block.shopify_attributes }}>
-    {%- assign collection = collections[block.settings.collection] -%}
+  <div class="grid featured-styles">
+  {% for block in section.blocks limit: section.blocks.size %}
+    <div class="grid__item medium-up--one-quarter" {{ block.shopify_attributes }}>
+      {%- assign collection = collections[block.settings.collection] -%}
 
-    <a href="{% if collection == empty %}#{% else %}{{ collection.url }}{% endif %}">
-      {% if collection.image != blank %}
-        {{ collection | img_url: '480x480' | img_tag: collection.title }}
-      {% elsif collection.products.first != blank %}
-        {{ collection.products.first | img_url: '480x480' | img_tag: collection.title }}
-      {% elsif collection == empty %}
-        {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
-        {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
-      {% endif %}
-
-      <p>
-        {% if collection == empty %}
-          {{ 'homepage.onboarding.collection_title' | t }}
-        {% else %}
-          {{ collection.title }}
+      <a href="{% if collection == empty %}#{% else %}{{ collection.url }}{% endif %}">
+        {% if collection.image != blank %}
+          {{ collection | img_url: '480x480' | img_tag: collection.title }}
+        {% elsif collection.products.first != blank %}
+          {{ collection.products.first | img_url: '480x480' | img_tag: collection.title }}
+        {% elsif collection == empty %}
+          {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+          {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
         {% endif %}
-      </p>
-    </a>
-  </div>
-{% endfor %}
 
-{% if section.blocks.size == 0 %}
-  {% include 'no-blocks' %}
-{% endif %}
+        <p>
+          {% if collection == empty %}
+            {{ 'homepage.onboarding.collection_title' | t }}
+          {% else %}
+            {{ collection.title }}
+            <br>
+            <span>{{ collection.description }}</span>
+          {% endif %}
+        </p>
+      </a>
+    </div>
+  {% endfor %}
+  </div>
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+</div>
 
 {% schema %}
   {
