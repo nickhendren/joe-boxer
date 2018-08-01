@@ -3,14 +3,15 @@
   background-color: #101010;
 
   .site-logo {
-    display: block;
     color: #FFFFFF;
+    display: block;
+    font-family: 'Roboto Slab', serif;
+    font-size: 75px;
+    margin-bottom: -25px;
+    margin-top: -30px;
+    text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    text-align: center;
-    margin-top: -30px;
-    margin-bottom: -25px;
-    font-size: 75px;
 
     img {
       display: block;
@@ -18,7 +19,58 @@
     }
   }
 
-  .menu-closed:hover {
-    cursor: pointer;
+  span {
+    font-size: 10px;
+    font-weight: 100;
+    margin-left: -5px;
+    margin-top: 17px;
+    position: absolute;
+    vertical-align: top;
+  }
+
+  .menu-closed {
+    img {
+      margin-left: 25px;
+      margin-top: 40px;
+      position: absolute;
+    }
+
+    span {
+      color: #FFFFFF;
+      font-family: avenir next condensed;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-left: 60px;
+      margin-top: 41px;
+      position: absolute;
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .nav-icons {
+    .magnifying-glass {
+      margin-top: -45px;
+      position: absolute;
+      right: 4%;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .shopping-bag {
+      margin-top: -50px;
+      position: absolute;
+      right: 2%;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 }
