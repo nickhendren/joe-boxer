@@ -41,3 +41,41 @@
     position: relative;
   }
 }
+
+@include media-query($medium-down) {
+  .pc-two {
+    h2 {
+      font-size: 35px;
+      margin-top: 75px;
+    }
+
+    .patterns-mens {
+      margin-top: 185px;
+    }
+
+    .patterns-womens {
+      margin-left: 40%;
+      margin-top: 185px;
+    }
+  }
+}
+
+@include media-query($small) {
+  .pc-two {
+    h2 {
+      font-size: 24px;
+      margin-top: 25px;
+    }
+
+    .patterns-mens {
+      margin-top: 85px;
+      width: 40%;
+    }
+
+    .patterns-womens {
+      margin-left: 53%;
+      margin-top: 85px;
+      width: 40%;
+    }
+  }
+}

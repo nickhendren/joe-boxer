@@ -44,3 +44,38 @@
     position: relative;
   }
 }
+
+@include media-query($medium-down) {
+  .pc-one {
+    span {
+      margin-top: 50px;
+    }
+
+    h2 {
+      font-size: 35px;
+      margin-top: 90px;
+    }
+
+    button {
+      margin-top: 195px;
+    }
+  }
+}
+
+@include media-query($small) {
+  .pc-one {
+    span {
+      margin-top: 20px;
+      font-size: 12px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-top: 40px;
+    }
+
+    button {
+      margin-top: 100px;
+    }
+  }
+}
