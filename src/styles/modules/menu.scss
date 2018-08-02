@@ -57,3 +57,17 @@
     padding-left: 0;
   }
 }
+
+@include media-query($medium-down) {
+  .menu {
+    .loungewear, .specialty {
+      padding-left: 30px;
+    }
+  }
+}
+
+@include media-query($small) {
+  .menu {
+    z-index: 1000;
+  }
+}

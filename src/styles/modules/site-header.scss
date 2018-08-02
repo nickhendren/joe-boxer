@@ -74,3 +74,44 @@
     }
   }
 }
+
+@include media-query($medium-down) {
+  .menu-closed span {
+    display: none;
+  }
+
+  .header .nav-icons .magnifying-glass {
+    right: 6%;
+  }
+}
+
+@include media-query($small) {
+  header {
+    h1 a {
+      font-size: 48px !important;
+    }
+  }
+
+  .header {
+    span {
+      margin-left: -2px;
+      margin-top: 11px;
+    }
+
+    .menu-closed img {
+      margin-top: 23px;
+    }
+
+    .nav-icons {
+      .magnifying-glass {
+        margin-top: -30px;
+        right: 10%;
+      }
+
+      .shopping-bag {
+        margin-top: -35px;
+        right: 4%;
+      }
+    }
+  }
+}

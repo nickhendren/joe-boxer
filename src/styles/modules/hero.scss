@@ -36,11 +36,39 @@
 }
 
 .hero-section__men {
-    left: 40%;
-    top: 60%;
-  }
+  left: 40%;
+  top: 60%;
+}
 
 .hero-section__women {
-    left: 51%;
-    top: 60%;
+  left: 51%;
+  top: 60%;
+}
+
+@include media-query($medium-down) {
+  .hero-section h2 {
+    font-size: 35px;
   }
+
+  .hero-section__men {
+    left: 30%;
+  }
+}
+
+@include media-query($small) {
+  .hero-section {
+    h2 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    button {
+      padding: 10px 15px 10px 20px;
+      margin-top: 10px;
+    }
+  }
+
+  .hero-section__men {
+    left: 15%;
+  }
+}
